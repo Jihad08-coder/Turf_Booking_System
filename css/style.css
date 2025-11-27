@@ -1,0 +1,124 @@
+/* Basic layout */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+
+    /* default background image */
+    background: url('../images/turf03.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Only My Bookings page background */
+.my-bookings-bg {
+    background: url('../images/turf02.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* top navigation bar */
+.nav {
+    background: #1f2933;
+    padding: 10px 20px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav a {
+    color: #fff;
+    margin-right: 10px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.nav a:hover {
+    text-decoration: underline;
+}
+
+/* main card/container */
+.container {
+    padding: 20px;
+    max-width: 900px;
+    margin: 40px auto;
+    background: #ffffff;
+    border-radius: 6px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+/* forms */
+form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+label {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+input,
+select,
+textarea {
+    padding: 6px;
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 8px 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    background: #2563eb;
+    color: #fff;
+}
+
+button:hover {
+    background: #1d4ed8;
+}
+
+/* tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+    font-size: 14px;
+}
+
+th {
+    background: #f1f5f9;
+}
+
+/* messages */
+.message {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.message.success {
+    background: #dcfce7;
+    border: 1px solid #22c55e;
+}
+
+.message.error {
+    background: #fee2e2;
+    border: 1px solid #ef4444;
+}
+
+/* utility */
+.text-center {
+    text-align: center;
+}
