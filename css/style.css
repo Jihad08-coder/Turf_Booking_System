@@ -122,3 +122,76 @@ th {
 .text-center {
     text-align: center;
 }
+
+
+
+
+
+
+
+/* ========== HOME HERO (container er upar er lekha) ========== */
+
+.hero {
+    text-align: center;
+    padding: 40px 40px 28px;
+}
+
+.hero h2 {
+    margin: 0 0 12px 0;
+    font-size: 32px;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    /* colorful gradient text */
+    background: linear-gradient(135deg, #1d4ed8, #22c55e);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.hero p {
+    margin: 0 0 8px 0;
+    font-size: 15px;
+    color: #4b5563;
+    line-height: 1.7;
+}
+
+.hero-buttons {
+    margin-top: 8px;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+/* buttons for links */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 14px;
+    margin: 5px;
+}
+
+.btn-primary {
+    background: #2563eb;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background: #1d4ed8;
+}
+
+.btn-secondary {
+    background: transparent;
+    color: #2563eb;
+    border: 1px solid #2563eb;
+}
+
+.btn-secondary:hover {
+    background: #2563eb;
+    color: #fff;
+}
+
+.btn-small {
+    padding: 6px 12px;
+    font-size: 12px;
+}
