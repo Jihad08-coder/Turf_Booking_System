@@ -760,6 +760,217 @@
 
 
 
+
+/* =========================
+   MY BOOKINGS PAGE
+========================= */
+
+.my-bookings-wrapper {
+    width: 90%;
+    max-width: 1200px;
+    margin: 2.5rem auto 4rem;
+}
+
+/* header */
+.my-bookings-header {
+    margin-bottom: 1.5rem;
+}
+
+.page-title {
+    font-size: 2.2rem;
+    color: var(--black);
+    margin-bottom: 0.3rem;
+}
+
+.page-subtitle {
+    font-size: 1.4rem;
+    color: var(--light-black);
+}
+
+/* message box (reuse login style if already) */
+
+/* table wrapper */
+.booking-table-wrapper {
+    margin-top: 1.2rem;
+    overflow-x: auto;
+}
+
+/* main table */
+.booking-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+    font-size: 1.35rem;
+}
+
+.booking-table thead {
+    background: #f3f4f6;
+}
+
+.booking-table th,
+.booking-table td {
+    padding: 0.8rem 1rem;
+    text-align: left;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.booking-table th {
+    font-weight: 600;
+    color: #111827;
+}
+
+
+/* Default fallback for booking page */
+.booking-bg-default {
+    background: #f3f4f6;
+}
+
+/* FOOTBALL booking page background */
+.booking-bg-football {
+    background: url('../images/turf07.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* BADMINTON booking page background */
+.booking-bg-badminton {
+    background: url('../images/turf08.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* White card on top of background (common) */
+.booking-wrapper {
+    width: 90%;
+    max-width: 1200px;
+    margin: 2.5rem auto 4rem;
+    padding: 2rem 2rem;
+    background: rgba(255, 255, 255, 0.93);
+    border-radius: 20px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.18);
+}
+
+
+.booking-table tbody tr:nth-child(even) {
+    background: #f9fafb;
+}
+
+/* empty state cell */
+.no-bookings-cell {
+    text-align: center;
+    padding: 1.8rem 1rem;
+    color: var(--light-black);
+}
+
+/* turf column */
+.turf-cell {
+    display: flex;
+    flex-direction: column;
+}
+
+.turf-name {
+    font-weight: 600;
+    color: #111827;
+}
+
+.turf-location {
+    font-size: 1.2rem;
+    color: #6b7280;
+}
+
+/* status pills */
+.status-pill,
+.payment-pill {
+    display: inline-block;
+    padding: 0.25rem 0.9rem;
+    border-radius: 999px;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+/* booking status colors */
+.status-pending {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.status-approved {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.status-completed {
+    background: #e0f2fe;
+    color: #1e3a8a;
+}
+
+.status-cancelled {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+/* payment status colors */
+.payment-unpaid {
+    background: #fee2e2;
+    color: #b91c1c;
+}
+
+.payment-paid {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.payment-refunded {
+    background: #e0f2fe;
+    color: #1e3a8a;
+}
+
+/* cancel button */
+.btn-status.btn-reject {
+    display: inline-block;
+    padding: 0.3rem 0.9rem;
+    font-size: 1.2rem;
+    border-radius: 999px;
+    border: none;
+    background: #fee2e2;
+    color: #b91c1c;
+    text-decoration: none;
+    cursor: pointer;
+    transition: .15s;
+}
+
+.btn-status.btn-reject:hover {
+    background: #fecaca;
+    color: #7f1d1d;
+}
+
+/* no action dash */
+.no-action {
+    font-size: 1.2rem;
+    color: #9ca3af;
+}
+
+/* responsive */
+@media (max-width: 768px) {
+    .booking-table th,
+    .booking-table td {
+        padding: 0.6rem 0.7rem;
+        font-size: 1.25rem;
+    }
+
+    .page-title {
+        font-size: 1.9rem;
+    }
+}
+
+
+
+
+
+
+
+
 /* =========================
    ADMIN DASHBOARD(done)
 ========================= */
