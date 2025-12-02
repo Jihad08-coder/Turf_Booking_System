@@ -156,3 +156,114 @@
     }
 }
 
+
+
+
+
+
+
+/* =========================
+   BOOKING WINDOW UPDATE PAGE
+========================= */
+
+.window-update-wrapper {
+    width: 90%;
+    max-width: 900px;
+    margin: 2.5rem auto 4rem;
+}
+
+/* Header text */
+.window-update-header {
+    margin-bottom: 1.5rem;
+}
+
+.window-title {
+    font-size: 2.2rem;
+    color: var(--black);
+    margin-bottom: 0.3rem;
+}
+
+.window-subtitle {
+    font-size: 1.4rem;
+    color: var(--light-black);
+}
+
+/* Message */
+.window-msg {
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Form Card */
+.window-update-card {
+    background: #ffffff;
+    padding: 2rem 2rem;
+    border-radius: 16px;
+    box-shadow: var(--box-shadow);
+}
+
+/* Form layout */
+.window-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+}
+
+/* Form groups */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.form-group label {
+    font-size: 1.45rem;
+    font-weight: 600;
+    color: var(--black);
+}
+
+/* Inputs */
+.window-form input[type="date"],
+.window-form input[type="number"] {
+    padding: 0.9rem 1.1rem;
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    font-size: 1.4rem;
+    background: #f9fafb;
+    transition: border-color .15s ease, background .15s ease;
+}
+
+.window-form input:focus {
+    border-color: var(--main-color);
+    background: #fff;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(41,142,56,0.2);
+}
+
+/* Save Button */
+.window-save-btn {
+    background: var(--main-color);
+    color: #fff !important;
+    padding: 1rem 1.4rem;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 0.5rem;
+    text-align: center;
+}
+
+.window-save-btn:hover {
+    background: var(--black);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .window-update-card {
+        padding: 1.4rem;
+    }
+
+    .window-title {
+        font-size: 1.9rem;
+    }
+}
+
