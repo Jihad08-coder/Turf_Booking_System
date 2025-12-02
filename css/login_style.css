@@ -1,0 +1,255 @@
+/* =========================
+   LOGIN PAGE LAYOUT
+========================= */
+.login-wrapper {
+    width: 100%;
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 1rem;
+
+    /* background image */
+    background: url('../images/turf02.jpg') no-repeat center center/cover;
+}
+
+/* Optional: Darkness overlay (to make form readable) */
+.login-wrapper::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.45); /* darker = 0.55 / lighter = 0.25 */
+    z-index: 0;
+}
+
+.login-card {
+    position: relative;
+    z-index: 1; /* card will stay above the dark overlay */
+}
+
+
+.login-card {
+    width: 100%;
+    max-width: 450px;
+    background:#ffffff;
+    border-radius: 18px;
+    padding: 2rem 5.2rem;
+    box-shadow: 0 10px 25px rgba(0,0,0,.1);
+    animation: fadeUp .7s ease;
+}
+
+@keyframes fadeUp {
+    from {opacity:0; transform: translateY(20px);}
+    to   {opacity:1; transform: translateY(0);}
+}
+
+/* title */
+.login-title {
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--black);
+    margin-bottom: 1.5rem;
+}
+
+/* =========================
+   TABS (Customer / Manager / Admin)
+========================= */
+.login-tabs {
+    display: flex;
+    justify-content: space-between;
+    background: #f3f3f3;
+    padding: 0.7rem;
+    border-radius: 50px;
+    margin-bottom: 1.8rem;
+}
+
+.login-tab {
+    flex: 1;
+    text-align: center;
+    padding: 0.7rem 0;
+    border-radius: 50px;
+    font-size: 1.4rem;
+    text-decoration: none;
+    color: var(--black);
+    transition: 0.2s;
+}
+
+.login-tab.active {
+    background: var(--main-color);
+    color: #fff;
+    font-weight: 600;
+}
+
+/* =========================
+   FORM DESIGN
+========================= */
+.login-form label {
+    font-size: 1.4rem;
+    color: var(--black);
+    margin-bottom: .4rem;
+    display: block;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 1rem 1rem;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 1.2rem;
+    font-size: 1.4rem;
+    transition: .2s;
+}
+
+.login-form input:focus {
+    border-color: var(--main-color);
+    box-shadow: 0 0 0 2px rgba(22,163,74,0.2);
+}
+
+/* =========================
+   LOGIN BUTTON
+========================= */
+.login-btn {
+    width: 100%;
+    margin-top: .5rem;
+    padding: 1rem 1rem;
+    font-size: 1.6rem;
+    border-radius: 10px;
+}
+
+/* =========================
+   MESSAGE BOX
+========================= */
+.message.error {
+    background: rgba(255,0,0,0.1);
+    border-left: 4px solid #e00;
+    padding: 0.8rem 1rem;
+    border-radius: 8px;
+    color: #b10000;
+    margin-bottom: 1.2rem;
+    font-size: 1.4rem;
+}
+
+
+/* Wrapper + Card + Animation ager motoi thakbe */
+
+/* already ache: .login-wrapper, .login-card, .login-title, .login-tabs, .login-form, .login-btn, .message.error */
+
+/* BG image jodi use kore thako: */
+
+
+
+/* divider text before form */
+.auth-divider-text {
+    text-align: center;
+    font-size: 1.3rem;
+    color: var(--light-black);
+    margin: 1.2rem 0 1rem;
+}
+
+/* bottom switch text (login/register link) */
+.auth-switch-text {
+    margin-top: 1.5rem;
+    text-align: center;
+    font-size: 1.3rem;
+    color: var(--light-black);
+}
+
+.auth-switch-text a {
+    color: var(--main-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.auth-switch-text a:hover {
+    text-decoration: underline;
+}
+
+/* success message style */
+.message.success {
+    background: rgba(22,163,74,0.1);
+    border-left: 4px solid var(--main-color);
+    padding: 0.8rem 1rem;
+    border-radius: 8px;
+    color: var(--main-color);
+    margin-bottom: 1.2rem;
+    font-size: 1.4rem;
+}
+
+
+/* divider text before social buttons */
+.social-or {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-size: 1.3rem;
+    color: var(--light-black);
+    margin: 1.8rem 0 1rem;
+}
+
+.social-or span:nth-child(1),
+.social-or span:nth-child(3) {
+    flex: 1;
+    height: 1px;
+    background: #ddd;
+}
+
+/* container */
+.social-buttons.vertical {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+}
+
+/* main social button */
+.social-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    width: 100%;
+    padding: 0.7rem 1rem;
+    border-radius: 8px;
+    border: 1px solid #d0d7de;
+    background: #fff;
+    font-size: 1.4rem;
+    color: #111;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background .15s ease, box-shadow .15s ease, border-color .15s ease;
+}
+
+.social-btn:hover {
+    background: #f6f8fa;
+    border-color: #b5c0cc;
+    box-shadow: 0 1px 3px rgba(15,23,42,0.15);
+}
+
+/* left icon circle */
+.social-icon-circle {
+    width: 26px;
+    height: 26px;
+    border-radius: 999px;
+    background: #fff;
+    border: 1px solid #d0d7de;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+/* optional: provider-specific accent on text or icon */
+.social-google .social-icon-circle {
+    border-color: #ea4335;
+    color: #ea4335;
+}
+
+.social-fb .social-icon-circle {
+    border-color: #1877f2;
+    color: #1877f2;
+}
+
+.social-gh .social-icon-circle {
+    border-color: #24292e;
+    color: #24292e;
+}
