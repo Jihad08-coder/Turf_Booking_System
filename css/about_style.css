@@ -131,3 +131,84 @@
     color: var(--light-black);
     line-height: 1.6;
 }
+
+/* Two column flex */
+.about-two-column {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.about-panel ul {
+    padding-left: 1.4rem;
+}
+
+.about-panel li {
+    margin-bottom: 0.7rem;
+}
+
+/* ===============================
+   HIGHLIGHTS 
+=============================== */
+.about-highlight {
+    margin-top: 4rem;
+    background: var(--main-color);
+    padding: 3rem 2rem;
+    border-radius: 18px;
+    color: #fff;
+    box-shadow: var(--box-shadow);
+}
+
+.about-highlight h3 {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+.about-highlight ul {
+    list-style: none;
+    padding: 0;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-highlight li {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+}
+
+.about-icon {
+    font-size: 1.8rem;
+    color: #fff;
+}
+
+/* ===============================
+   RESPONSIVE
+=============================== */
+@media (max-width: 900px) {
+    .about-hero h1 {
+        font-size: 2.4rem;
+    }
+
+    .about-two-column {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 500px) {
+    .about-hero {
+        padding: 4rem 1.5rem;
+    }
+
+    .about-lead {
+        font-size: 1.4rem;
+    }
+
+    .about-panel {
+        padding: 1.8rem;
+    }
+}
