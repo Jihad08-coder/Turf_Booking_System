@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // 4) Manager dashboard card entrance animation
     const managerCard = document.querySelector('#viewRequestsCard');
     if (managerCard) {
-        // ছোট delay দিলে animation টা smooth লাগে
+        // small delay for animation smooth 
         setTimeout(() => {
             managerCard.classList.add('is-visible');
         }, 150);
@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (!revealBlocks.length) return;
 
-    // পুরনো ব্রাউজারের জন্য fallback
+    // old browser er jonno fallback
     if (!('IntersectionObserver' in window)) {
         revealBlocks.forEach(el => el.classList.add('is-visible'));
         return;
