@@ -144,12 +144,21 @@ include 'header.php';
                             </span>
                         </td>
 
-                        <!-- payment pill -->
-                        <td>
-                            <span class="payment-pill payment-<?php echo htmlspecialchars($b['payment_status']); ?>">
-                                <?php echo ucfirst(htmlspecialchars($b['payment_status'])); ?>
-                            </span>
-                        </td>
+                         <!-- payment pill + pay button -->
+<td>
+    <span class="payment-pill payment-<?php echo htmlspecialchars($b['payment_status']); ?>">
+        <?php echo ucfirst(htmlspecialchars($b['payment_status'])); ?>
+    </span>
+
+    <?php if ($b['payment_status'] === 'unpaid' && $b['status'] === 'pending'): ?>
+        <br>
+        <a href="payment.php?booking_id=<?php echo $b['id']; ?>"
+           class="btn-status btn-approve"
+           style="margin-top:6px; display:inline-block; font-size:12px;">
+            Pay Now
+        </a>
+    <?php endif; ?>
+</td>
 
                         <!-- cancel action -->
                         <td>
