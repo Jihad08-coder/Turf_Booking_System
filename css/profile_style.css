@@ -1,0 +1,199 @@
+/* profile  css */
+/* ===========================
+   Profile Page Styles
+   File: css/profile_style.css
+   =========================== */
+
+.profile-wrapper {
+    max-width: 1000px;
+    margin: 110px auto 60px;       /* navbar theke nice + niche gap */
+    padding: 32px 36px;
+    background: #ffffff;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+/* Top part: image + basic info */
+.profile-top {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 24px;
+    border-bottom: 1px solid #eeeeee;
+    padding-bottom: 18px;
+}
+
+.profile-avatar {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid #159947;    /* green theme */
+    flex-shrink: 0;
+    background: #f4f4f4;
+}
+
+.profile-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-info h2 {
+    margin: 0 0 6px;
+    font-size: 26px;
+    font-weight: 700;
+    color: #222222;
+}
+
+.profile-info p {
+    margin: 3px 0;
+    color: #555555;
+    font-size: 14px;
+}
+
+/* Sections: About, Skills etc. */
+.profile-bio {
+    margin-top: 22px;
+    line-height: 1.7;
+    color: #444444;
+    font-size: 15px;
+}
+
+.profile-section-title {
+    margin: 0 0 8px;
+    font-weight: 600;
+    font-size: 16px;
+    color: #222222;
+    border-left: 4px solid #159947;
+    padding-left: 10px;
+}
+
+/* Social buttons */
+.profile-socials {
+    margin-top: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.profile-socials a {
+    text-decoration: none;
+    padding: 9px 18px;
+    border-radius: 999px;
+    font-weight: 500;
+    font-size: 14px;
+    display: inline-block;
+    transition: transform 0.12s ease, box-shadow 0.12s ease, opacity 0.12s ease;
+}
+
+/* Colors for buttons */
+.btn-fb {
+    background: #159947;
+    color: #ffffff;
+}
+
+.btn-git {
+    background: #159947;
+    color: #ffffff;
+}
+
+.btn-li {
+    background: #159947;
+    color: #ffffff;
+}
+
+.profile-socials a:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.16);
+    opacity: 0.95;
+}
+
+/* Responsive: small screen e center kore dibo */
+@media (max-width: 768px) {
+    .profile-wrapper {
+        margin: 90px 16px 40px;
+        padding: 24px 20px;
+    }
+
+    .profile-top {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+/* icons + text nicely align korar jonno */
+.profile-socials a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px; /* icon ar text er majhe gap */
+}
+
+/* icon size er jonno */
+.profile-socials a i {
+    font-size: 16px;
+}
+
+
+/* ===========================
+   Complain / Contact Box
+   =========================== */
+.complain-box {
+    margin-top: 28px;
+    padding: 18px 22px;
+    border-radius: 14px;
+    background: #f7f9fb;
+    border-left: 4px solid #159947;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+}
+
+.complain-text h3 {
+    margin: 0 0 6px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #222;
+}
+
+.complain-text p {
+    margin: 0;
+    font-size: 14px;
+    color: #555;
+    max-width: 520px;
+}
+
+.complain-btn {
+    padding: 10px 22px;
+    border-radius: 999px;
+    background: #159947;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+    white-space: nowrap;
+    transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.12s ease;
+}
+
+.complain-btn:hover {
+    background: #0f7a38;
+    transform: translateY(-1px);
+    box-shadow: 0 3px 8px rgba(0,0,0,0.18);
+}
+
+/* small screen e vertically stack */
+@media (max-width: 768px) {
+    .complain-box {
+        align-items: flex-start;
+    }
+
+    .complain-btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+
