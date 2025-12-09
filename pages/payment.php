@@ -79,4 +79,48 @@ $pageBodyClass = 'page-payment';
 include 'header.php';
 ?>
 
+<!-- ===========================
+     PAYMENT PAGE WRAPPER
+=========================== -->
 
+<div class="payment-wrapper">
+
+    <?php if ($error): ?>
+        <div class="payment-msg error">
+            <?php echo htmlspecialchars($error); ?>
+        </div>
+    <?php endif; ?>
+
+    <h2 class="payment-title">Payment</h2>
+
+    <div class="payment-summary">
+        You are paying for:
+        <strong><?php echo htmlspecialchars($booking['turf_name']); ?></strong><br>
+        Date: <?php echo htmlspecialchars($booking['booking_date']); ?><br>
+        Time:
+        <?php
+            $timeRange = substr($booking['start_time'], 0, 5) . ' - ' . substr($booking['end_time'], 0, 5);
+            echo htmlspecialchars($timeRange);
+        ?><br>
+        Total Amount:
+        <strong>৳<?php echo htmlspecialchars(number_format($booking['total_price'], 2)); ?></strong>
+    </div>
+
+    <form method="post" class="payment-form">
+
+        <label>Mobile Number (Dummy)</label>
+        <input type="text" name="mobile_number" placeholder="01XXXXXXXXX" required>
+
+        <label>Amount (৳)</label>
+        <input type="number" name="amount"
+               value="<?php echo htmlspecialchars($booking['total_price']); ?>" required>
+
+        <label>Your Account Password</label>
+        <input type="password" name="password" placeholder="Enter your login password" required>
+
+        <button type="submit" class="pay-btn">Pay Now</button>
+    </form>
+
+</div>
+
+<?php include 'footer.php'; ?>
